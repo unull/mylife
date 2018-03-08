@@ -18,7 +18,7 @@
 <meta charset="<?php bloginfo('charset'); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="icon" sizes="300x300" href="/wp-content/uploads/icon/favicon_300.jpg" />
+<link rel="apple-touch-icon" sizes="300x300" href="/wp-content/uploads/icon/favicon_300.jpg" />
 <link rel="shortcut icon" href="/wp-content/uploads/icon/favicon.ico"/>
 <?php bhari_head_bottom(); ?>
 <?php wp_head(); ?>
