@@ -1,0 +1,36 @@
+
+/**
+ * Page Title
+ */
+
+.page-title i {
+    margin-right: 0.5em;
+}
+
+/**
+ * Page Description
+ */
+.archive-description {
+	.author & {
+    	margin-top: 1em;
+	}
+}
+
+/**
+ * Entry Content
+ */
+.page-content a,
+.comment-content a,
+.entry-content a {
+    border-bottom: 1px dotted;
+    padding-bottom: 3px;
+    transition: all ease 0.3s;
+}
+
+/**
+ * Read More
+ */
+.more-link {
+    margin-top: 1em;
+    display: inline-block;
+}

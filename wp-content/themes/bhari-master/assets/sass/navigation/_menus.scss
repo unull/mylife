@@ -1,0 +1,149 @@
+.main-navigation {
+	clear: both;
+	display: block;
+	width: 100%;
+
+	ul {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding-left: 0;
+
+		@media screen and (min-width: 768px) {
+			ul {
+				float: left;
+				position: absolute;
+				left: -999em;
+				z-index: 99999;
+
+				ul {
+					left: -999em;
+					top: 0;
+				}
+
+				li {
+					&:hover > ul,
+					&.focus > ul {
+						left: 100%;
+					}
+				}
+
+				a {
+					width: 300px;
+				}
+
+			}
+		}
+
+		li:hover > ul,
+		li.focus > ul {
+			left: auto;
+		}
+	}
+
+	li {
+		position: relative;
+	}
+
+	a {
+		display: block;
+		text-decoration: none;
+	}
+}
+
+/* Small menu. */
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 768px) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+
+	.site-main & {
+		margin: 0 0 2em 0;
+		overflow: hidden;
+	}
+
+	@media screen and (min-width: 768px) {
+		.nav-previous {
+			float: left;
+			width: 50%;
+		}
+
+		.nav-next {
+			float: right;
+			text-align: right;
+			width: 50%;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		.nav-previous {
+			margin-bottom: 1em;
+		}
+	}
+}
+
+/**
+ * Accessibility Menu
+ */
+.main-navigation {
+	
+	ul.children.toggled-on,
+	ul.sub-menu.toggled-on {
+	    display: block;
+	}
+	
+	.sub-menu,
+	.children {
+
+		a {
+	    	line-height: 3.5;
+		}
+	}
+
+	.sub-menu .page_item_has_children:after,
+	.children .page_item_has_children:after,
+	.menu-item-has-children:after {
+	    right: 1em;
+	}
+	
+	@media all and ( max-width: 768px ) {
+		ul.children,
+		ul.sub-menu {
+		    display: none;
+		}
+	}
+}
+
+.dropdown-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: transparent;
+	@media all and ( max-width: 768px ) {
+		padding: 0.6em 2em;
+	}
+
+	@media all and ( min-width: 768px ) {
+		display: none;
+	}
+	
+	i {
+	    transition: all ease 0.3s;
+	}
+
+	&.toggled-on i {
+	    transform: rotate(-180deg);
+	}
+}
